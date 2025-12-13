@@ -329,6 +329,7 @@ challenges:
       name: tftp
     - id: tic
       name: tic
+      image: ubuntu:20.04
     - id: time
       name: time
     - id: timeout
