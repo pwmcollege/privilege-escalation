@@ -3,5 +3,8 @@ challenges:
     - id: the-early-bird
       name: The Early Bird
       image: pwmcollege/challenge-web
+    - id: tic-revenge
+      name: Tic Revenge
+      image: pwmcollege/challenge-suid
     - id: cryostasis
       name: Cryostasis
