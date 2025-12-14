@@ -3,6 +3,11 @@
 rm /challenge/.init
 find -L /challenge -type f -exec chmod 0444 {} +
 
+ln -s /etc/bash.bashrc /etc/bashrc
+if id ubuntu; then userdel -f -r ubuntu; fi
+chown -R 0:0 /usr/bin /usr/local/bin /usr/local/sbin
+find / -xdev -type f -perm -4000 -exec chmod u-s {}
+
 mkdir -p /challenge/bin
 ln -sf /usr/sbin/sysctl /challenge/bin/sysctl
 

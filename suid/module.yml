@@ -311,9 +311,10 @@ challenges:
       name: strings
     - id: su
       name: su
-    # - id: sysctl
-    #   name: sysctl
-    #   privileged: true
+    - id: sysctl
+      name: sysctl
+      image: ubuntu:20.04
+      privileged: true
     - id: tac
       name: tac
     - id: tail
