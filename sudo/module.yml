@@ -611,10 +611,8 @@ challenges:
       name: tdbtool
     - id: tee
       name: tee
-    - id: telnet
-      name: telnet
-      visibility:
-        start: "2067-04-20T12:00:00-07:00"
+    # - id: telnet
+    #   name: telnet
     - id: tex
       name: tex
     - id: tftp
@@ -675,6 +673,8 @@ challenges:
       name: vipw
     - id: virsh
       name: virsh
+    - id: vm
+      name: vm
     - id: w3m
       name: w3m
     - id: wall

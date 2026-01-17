@@ -1,0 +1,1 @@
+This challenge needs to be solved in a virtual machine! You can launch with the virtual machine using the vm command, then interact with the challenges.

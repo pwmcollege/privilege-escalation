@@ -1,0 +1,17 @@
+#!/bin/bash
+
+rm /challenge/.init
+find -L /challenge -type f -exec chmod 0444 {} +
+
+mkdir -p /challenge/bin
+ln -sf /usr/bin/sudo /challenge/bin/sudo
+
+if [ "$(head -n 1 /run/dojo/sys/workspace/privileged)" = "0" ]; then
+    cat > /etc/sudoers.d/hacker <<-'EOF'
+	hacker ALL=(root) NOPASSWD: /usr/local/bin/vm
+	EOF
+
+    chmod 440 /etc/sudoers.d/hacker
+
+passwd -d root
+passwd -d hacker
