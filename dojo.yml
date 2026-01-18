@@ -7,5 +7,6 @@ image: pwncollege/challenge-legacy:latest
 modules:
     - id: suid
     - id: sudo
+    - id: capabilities
     - id: cve
     - id: miscellaneous

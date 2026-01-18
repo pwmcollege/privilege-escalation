@@ -1,0 +1,15 @@
+name: Capabilities
+image: pwmcollege/challenge-sudo
+challenges:
+    - id: gzip
+      name: gzip
+    - id: node
+      name: node
+    - id: perl
+      name: perl
+    - id: php
+      name: php
+    - id: python
+      name: python
+    - id: ruby
+      name: ruby
