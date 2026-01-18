@@ -12,6 +12,7 @@ if [ "$(head -n 1 /run/dojo/sys/workspace/privileged)" = "0" ]; then
 	EOF
 
     chmod 440 /etc/sudoers.d/hacker
+fi
 
 passwd -d root
 passwd -d hacker
