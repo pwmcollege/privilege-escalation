@@ -117,6 +117,8 @@ challenges:
       name: cmp
     - id: cobc
       name: cobc
+    - id: codex
+      name: codex
     - id: column
       name: column
     - id: comm

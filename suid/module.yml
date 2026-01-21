@@ -67,8 +67,6 @@ challenges:
       name: clamscan
     - id: cmp
       name: cmp
-    - id: codex
-      name: codex
     - id: column
       name: column
     - id: comm
