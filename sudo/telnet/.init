@@ -5,19 +5,18 @@ find -L /challenge -type f -exec chmod 0444 {} +
 
 mkdir -p /challenge/bin
 ln -sf /usr/bin/telnet /challenge/bin/telnet
-ln -sf /etc/init.d/inetutils-inetd /challenge/bin/inetutils-inetd
 ln -sf /usr/bin/sudo /challenge/bin/sudo
+
 sed -i 's/#<off># telnet/telnet/' /etc/inetd.conf
+/etc/init.d/inetutils-inetd start
 
 if [ "$(head -n 1 /run/dojo/sys/workspace/privileged)" = "0" ]; then
     cat > /etc/sudoers.d/hacker <<-'EOF'
-	hacker ALL=(root) NOPASSWD: /usr/bin/telnet /etc/init.d/inetutils-inetd
+	hacker ALL=(root) NOPASSWD: /usr/bin/telnet
 	EOF
 
     chmod 440 /etc/sudoers.d/hacker
-else
-    passwd -d root
 fi
 
+passwd -d root
 passwd -d hacker
-chmod u+s /usr/bin/su
