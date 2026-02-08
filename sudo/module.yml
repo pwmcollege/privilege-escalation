@@ -363,6 +363,7 @@ challenges:
       name: mosquitto
     - id: mount
       name: mount
+      privileged: true
     - id: msgattrib
       name: msgattrib
     - id: msgcat
