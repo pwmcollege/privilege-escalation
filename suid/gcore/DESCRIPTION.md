@@ -1,0 +1,1 @@
+A root-owned process with the flag is started automatically. Its PID is at `/challenge/pid`.
