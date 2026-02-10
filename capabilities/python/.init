@@ -6,4 +6,4 @@ find -L /challenge -type f -exec chmod 0444 {} +
 mkdir -p /challenge/bin
 ln -sf /usr/bin/python /challenge/bin/python
 
-setcap cap_setuid+ep /usr/bin/python3.10
+setcap cap_setuid+ep /usr/bin/python3.12

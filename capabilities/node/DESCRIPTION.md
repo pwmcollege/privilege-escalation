@@ -1,0 +1,1 @@
+The following capabilities are set for `node`: `CAP_SETUID`

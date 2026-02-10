@@ -6,4 +6,4 @@ find -L /challenge -type f -exec chmod 0444 {} +
 mkdir -p /challenge/bin
 ln -sf /usr/bin/php /challenge/bin/php
 
-setcap cap_setuid+ep /usr/bin/php8.1
+setcap cap_setuid+ep /usr/bin/php8.3

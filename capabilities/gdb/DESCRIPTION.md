@@ -1,0 +1,1 @@
+The following capabilities are set for `gdb`: `CAP_SETUID`

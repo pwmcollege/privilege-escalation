@@ -1,6 +1,8 @@
 name: Capabilities
 image: pwmcollege/challenge-sudo
 challenges:
+    - id: gdb
+      name: gdb
     - id: gzip
       name: gzip
     - id: node

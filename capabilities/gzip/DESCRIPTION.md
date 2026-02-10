@@ -1,0 +1,1 @@
+The following capabilities are set for `gzip`: `CAP_DAC_OVERRIDE`

@@ -1,0 +1,1 @@
+The following capabilities are set for `ruby`: `CAP_SETUID`

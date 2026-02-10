@@ -1,0 +1,1 @@
+The following capabilities are set for `php`: `CAP_SETUID`
