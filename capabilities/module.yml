@@ -1,5 +1,5 @@
 name: Capabilities
-image: pwmcollege/challenge-sudo
+image: pwmcollege/challenge-capabilities
 challenges:
     - id: gdb
       name: gdb
