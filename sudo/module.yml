@@ -277,6 +277,8 @@ challenges:
       name: iconv
     # - id: iftop
     #   name: iftop
+    - id: insmod
+      name: insmod
     - id: install
       name: install
     - id: ionice
