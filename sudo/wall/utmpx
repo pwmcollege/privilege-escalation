@@ -30,17 +30,14 @@ class U(ctypes.Structure):
     ]
 
 
-out = b""
-for i in range(16):
-    e = U()
-    e.type = 7
-    e.pid = 1
-    e.line = f"pts/{i}".encode()
-    e.id = f"p{i:03d}".encode()
-    e.user = b"hacker"
-    e.host = b"localhost"
-    e.tv.s = int(time.time())
-    out += bytes(e)
+e = U()
+e.type = 7
+e.pid = 1
+e.line = b"hacker"
+e.id = b"pipe"
+e.user = b"hacker"
+e.host = b"localhost"
+e.tv.s = int(time.time())
 
 os.umask(0o022)
-open("/var/run/utmpx", "wb").write(out)
+open("/var/run/utmpx", "wb").write(bytes(e))

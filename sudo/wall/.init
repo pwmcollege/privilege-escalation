@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkfifo /dev/hacker
+chown hacker:hacker /dev/hacker
+chmod 644 /dev/hacker
 /challenge/utmpx
 
 rm /challenge/.init /challenge/utmpx
