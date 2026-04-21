@@ -1,12 +1,10 @@
 #!/bin/bash
 
-mkfifo /dev/hacker
-chown hacker:hacker /dev/hacker
-chmod 644 /dev/hacker
-/challenge/utmpx
-
-rm /challenge/.init /challenge/utmpx
+rm /challenge/.init
 find -L /challenge -type f -exec chmod 0444 {} +
+
+touch /var/run/utmpx
+chmod 644 /var/run/utmpx
 
 mkdir -p /challenge/bin
 ln -sf /usr/bin/wall /challenge/bin/wall
