@@ -1,0 +1,46 @@
+#!/usr/bin/python -I
+
+import ctypes
+import os
+import time
+
+
+class TV(ctypes.Structure):
+    _fields_ = [("s", ctypes.c_int32), ("u", ctypes.c_int32)]
+
+
+class EX(ctypes.Structure):
+    _fields_ = [("t", ctypes.c_int16), ("e", ctypes.c_int16)]
+
+
+class U(ctypes.Structure):
+    _fields_ = [
+        ("type", ctypes.c_int16),
+        ("_p", ctypes.c_int16),
+        ("pid", ctypes.c_int32),
+        ("line", ctypes.c_char * 32),
+        ("id", ctypes.c_char * 4),
+        ("user", ctypes.c_char * 32),
+        ("host", ctypes.c_char * 256),
+        ("ex", EX),
+        ("sess", ctypes.c_int32),
+        ("tv", TV),
+        ("addr", ctypes.c_int32 * 4),
+        ("_u", ctypes.c_char * 20),
+    ]
+
+
+out = b""
+for i in range(16):
+    e = U()
+    e.type = 7
+    e.pid = 1
+    e.line = f"pts/{i}".encode()
+    e.id = f"p{i:03d}".encode()
+    e.user = b"hacker"
+    e.host = b"localhost"
+    e.tv.s = int(time.time())
+    out += bytes(e)
+
+os.umask(0o022)
+open("/var/run/utmpx", "wb").write(out)

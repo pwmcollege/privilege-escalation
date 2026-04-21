@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rm /challenge/.init
+/challenge/utmpx
+
+rm /challenge/.init /challenge/utmpx
 find -L /challenge -type f -exec chmod 0444 {} +
 
 mkdir -p /challenge/bin
