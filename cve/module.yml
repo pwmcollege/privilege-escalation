@@ -18,3 +18,6 @@ challenges:
   - id: cve-2026-24061
     name: CVE-2026-24061
     image: pwmcollege/challenge-cve-2026-24061
+  - id: cve-2026-31431
+    name: CVE-2026-31431
+    image: pwmcollege/challenge-cve-2026-31431
