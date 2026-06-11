@@ -3,21 +3,28 @@ challenges:
   - id: cve-2021-3156
     name: CVE-2021-3156
     image: pwmcollege/challenge-cve-2021-3156
+    required: false
   - id: cve-2023-22809
     name: CVE-2023-22809
     image: pwmcollege/challenge-cve-2023-22809
+    required: false
   - id: cve-2025-32463
     name: CVE-2025-32463
     image: pwmcollege/challenge-cve-2025-32463
+    required: false
   - id: cve-2025-59825
     name: CVE-2025-59825
     image: pwmcollege/challenge-cve-2025-59825
+    required: false
   - id: cve-2025-66478
     name: CVE-2025-66478
     image: pwmcollege/challenge-cve-2025-66478
+    required: false
   - id: cve-2026-24061
     name: CVE-2026-24061
     image: pwmcollege/challenge-cve-2026-24061
+    required: false
   - id: cve-2026-31431
     name: CVE-2026-31431
     image: pwmcollege/challenge-cve-2026-31431
+    required: false
