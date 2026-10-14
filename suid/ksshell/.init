@@ -6,5 +6,5 @@ find -L /challenge -type f -exec chmod 0444 {} +
 mkdir -p /challenge/bin
 ln -sf /usr/local/bin/ksshell /challenge/bin/ksshell
 
-sed -i '1s|^.*$|#!/usr/bin/exec-suid --environ=none -- /usr/bin/python3 -I|' /usr/local/bin/ksshell
+sed -i '1s|^.*$|#!/usr/bin/exec-suid -- /usr/bin/python3 -I|' /usr/local/bin/ksshell
 chmod u+s /usr/local/bin/ksshell
